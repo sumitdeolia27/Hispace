@@ -1,0 +1,212 @@
+'use strict';
+
+/**
+ * ==============================================
+ * hispace P2P v.1.7.12 - Configuration File
+ * ==============================================
+ *
+ * Branding and customizations require a license:
+ * https://codecanyon.net/item/hispace-p2p-webrtc-realtime-video-conferences/38376661
+ */
+
+const packageJson = require('../../package.json');
+
+module.exports = {
+    brand: {
+        htmlInjection: true,
+        app: {
+            language: 'en', // https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
+            name: 'hispace',
+            title: '<h1>hispace</h1>Free browser based Real-time video calls.<br />Simple, Secure, Fast.',
+            description:
+                'Start your next video call with a single click. No download, plug-in, or login is required. Just get straight to talking, messaging, and sharing your screen.',
+            joinDescription: 'Pick a room name.<br />How about this one?',
+            joinButtonLabel: 'JOIN ROOM',
+            joinLastLabel: 'Your recent room:',
+        },
+        og: {
+            type: 'app-webrtc',
+            siteName: 'hispace',
+            title: 'Click the link to make a call.',
+            description:
+                'hispace calling provides real-time HD quality and latency simply not available with traditional technology.',
+            image: 'https://p2p.hispace.com/images/preview.png',
+            url: 'https://p2p.hispace.com',
+        },
+        site: {
+            shortcutIcon: '../images/logo.svg',
+            appleTouchIcon: '../images/logo.svg',
+            landingTitle: 'hispace a Free Secure Video Calls, Chat & Screen Sharing.',
+            newCallTitle: 'hispace a Free Secure Video Calls, Chat & Screen Sharing.',
+            newCallRoomTitle: 'Pick name. <br />Share URL. <br />Start conference.',
+            newCallRoomDescription:
+                "Each room has its disposable URL. Just pick a room name and share your custom URL. It's that easy.",
+            loginTitle: 'hispace - Host Protected login required.',
+            clientTitle: 'hispace WebRTC Video call, Chat Room & Screen Sharing.',
+            privacyPolicyTitle: 'hispace - privacy and policy.',
+            stunTurnTitle: 'Test Stun/Turn Servers.',
+            notFoundTitle: 'hispace - 404 Page not found.',
+        },
+        html: {
+            topSponsors: true,
+            features: true,
+            browsers: true,
+            teams: true, // please keep me always true ;)
+            tryEasier: true,
+            poweredBy: true,
+            sponsors: true,
+            advertisers: true,
+            supportUs: true,
+            footer: true,
+        },
+        about: {
+            imageUrl: '../images/hispace-logo.gif',
+            title: `WebRTC P2P v${packageJson.version}`,
+            html: `
+                <button 
+                    id="support-button" 
+                    data-umami-event="Support button" 
+                    onclick="window.open('https://codecanyon.net/user/miroslavpejic85')">
+                    <i class="fas fa-heart" ></i>&nbsp;Support
+                </button>
+                <br /><br /><br />
+                Author:<a 
+                    id="linkedin-button" 
+                    data-umami-event="Linkedin button" 
+                    href="https://www.linkedin.com/in/miroslav-pejic-976a07101/" target="_blank"> 
+                    Miroslav Pejic
+                </a>
+                <br />
+                Email:<a 
+                    id="email-button" 
+                    data-umami-event="Email button" 
+                    href="mailto:miroslav.pejic.85@gmail.com?subject=hispace P2P info"> 
+                    miroslav.pejic.85@gmail.com
+                </a>
+                <br /><br />
+                <hr />
+                <span>&copy; 2025 hispace P2P, all rights reserved</span>
+                <hr />
+            `,
+        },
+        // https://docs.hispace.com/hispace-p2p/integration/#widgets-integration
+        widget: {
+            enabled: false,
+            roomId: 'support-room',
+            theme: 'dark',
+            widgetState: 'minimized',
+            widgetType: 'support',
+            supportWidget: {
+                position: 'top-right',
+                expertImages: [
+                    'https://photo.cloudron.pocketsolution.net/uploads/original/95/7d/a5f7f7a2c89a5fee7affda5f013c.jpeg',
+                ],
+                buttons: {
+                    audio: true,
+                    video: true,
+                    screen: true,
+                    chat: true,
+                    join: true,
+                },
+                checkOnlineStatus: false,
+                isOnline: true,
+                customMessages: {
+                    heading: 'Need Help?',
+                    subheading: 'Get instant support from our expert team!',
+                    connectText: 'connect in < 5 seconds',
+                    onlineText: 'We are online',
+                    offlineText: 'We are offline',
+                    poweredBy: 'Powered by hispace',
+                },
+            },
+        },
+        //...
+    },
+    /**
+     * Configuration for controlling the visibility of buttons in the hispace P2P client.
+     * Set properties to true to show the corresponding buttons, or false to hide them.
+     * captionBtn, showSwapCameraBtn, showScreenShareBtn, showFullScreenBtn, showVideoPipBtn, showDocumentPipBtn -> (auto-detected).
+     */
+    buttons: {
+        main: {
+            showAudioBtn: true,
+            showVideoBtn: true,
+            showScreenBtn: true, // autodetected
+            showMyHandBtn: true,
+            showChatRoomBtn: true,
+            showParticipantsBtn: true,
+            showMySettingsBtn: true,
+            showExtraBtn: true,
+            showShareQr: true,
+            showShareRoomBtn: true, // For guests
+            showHideMeBtn: true,
+            showRecordStreamBtn: true,
+            showFullScreenBtn: true,
+            showRoomEmojiPickerBtn: true,
+            showCaptionRoomBtn: true,
+            showWhiteboardBtn: true,
+            showSnapshotRoomBtn: true,
+            showFileShareBtn: true,
+            showDocumentPipBtn: true,
+            showAboutBtn: true, // Please keep me always true, Thank you!
+        },
+        chat: {
+            showTogglePinBtn: true,
+            showMaxBtn: true,
+            showSaveMessageBtn: true,
+            showMarkDownBtn: true,
+            showChatGPTBtn: true,
+            showFileShareBtn: true,
+            showShareVideoAudioBtn: true,
+            showParticipantsBtn: true,
+        },
+        caption: {
+            showTogglePinBtn: true,
+            showMaxBtn: true,
+        },
+        settings: {
+            showActiveRoomsBtn: true,
+            showMicOptionsBtn: true,
+            showTabRoomPeerName: true,
+            showTabRoomParticipants: true,
+            showTabRoomSecurity: true,
+            showTabEmailInvitation: true,
+            showCaptionEveryoneBtn: true,
+            showMuteEveryoneBtn: true,
+            showHideEveryoneBtn: true,
+            showEjectEveryoneBtn: true,
+            showLockRoomBtn: true,
+            showUnlockRoomBtn: true,
+            showShortcutsBtn: true,
+            customNoiseSuppression: true,
+        },
+        remote: {
+            showAudioVolume: true,
+            audioBtnClickAllowed: true,
+            videoBtnClickAllowed: true,
+            showVideoPipBtn: true,
+            showKickOutBtn: true,
+            showSnapShotBtn: true,
+            showFileShareBtn: true,
+            showShareVideoAudioBtn: true,
+            showGeoLocationBtn: true,
+            showPrivateMessageBtn: true,
+            showZoomInOutBtn: false,
+            showVideoFocusBtn: true,
+        },
+        local: {
+            showVideoPipBtn: true,
+            showSnapShotBtn: true,
+            showVideoCircleBtn: true,
+            showZoomInOutBtn: false,
+            showVideoFocusBtn: true,
+        },
+        whiteboard: {
+            whiteboardLockBtn: false,
+        },
+    },
+    webhook: {
+        enabled: false, // Enable webhook functionality
+        url: 'http://localhost:8888/webhook-endpoint', // Webhook server URL
+    },
+};

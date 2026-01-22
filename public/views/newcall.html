@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Title and Icon -->
+    <title id="newCallTitle">HiSpace - Start Your Meeting</title>
+    <link id="shortcutIcon" rel="shortcut icon" href="../images/logo.svg" />
+    <link id="appleTouchIcon" rel="apple-touch-icon" href="../images/logo.svg" />
+
+    <!-- Meta Information -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HiSpace - Start your video conference instantly" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="../css/landing.css" />
+    <link rel="stylesheet" href="../css/newcall.css" />
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Scripts -->
+    <script async src="../js/umami.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xss/dist/xss.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                        <img src="../images/logo.svg" alt="HiSpace" width="40" height="40" />
+                        <span class="logo-text">HiSpace</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/#features" class="nav-link">Features</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="newcall-main">
+        <div class="container">
+            <div class="newcall-content">
+                <!-- Header -->
+                <div class="newcall-header animate__animated animate__fadeInDown">
+                    <h1 class="newcall-title">
+                        Start Your <span class="gradient-text">Meeting</span>
+                    </h1>
+                    <p class="newcall-description">
+                        Pick a room name and share the link with your team. It's that simple.
+                    </p>
+                </div>
+
+                <!-- Room Card -->
+                <div class="room-card glass animate__animated animate__fadeInUp">
+                    <div class="room-card-header">
+                        <div class="room-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h2 class="room-card-title">Create Your Room</h2>
+                        <p class="room-card-subtitle">Choose a unique name for your meeting</p>
+                    </div>
+
+                    <div class="room-card-body">
+                        <div class="input-group">
+                            <label for="roomName" class="input-label">Room Name</label>
+                            <div class="input-wrapper">
+                                <input id="roomName" type="text" class="room-input" value="hispace" maxlength="32"
+                                    placeholder="Enter room name..." />
+                                <button id="genRoomButton" class="btn-icon" title="Generate random name">
+                                    <i class="fas fa-arrows-rotate"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button id="joinRoomButton" class="btn-join">
+                            <i class="fas fa-arrow-right"></i>
+                            Join Room
+                        </button>
+
+                        <div id="lastRoomContainer" class="last-room" style="display: none;">
+                            <div class="divider">
+                                <span>OR</span>
+                            </div>
+                            <p class="last-room-label">Your recent room:</p>
+                            <a id="lastRoom" class="last-room-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="quick-features animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="quick-feature">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure & Private</span>
+                    </div>
+                    <div class="quick-feature">
+                        <i class="fas fa-bolt"></i>
+                        <span>Instant Start</span>
+                    </div>
+                    <div class="quick-feature">
+                        <i class="fas fa-infinity"></i>
+                        <span>Unlimited Time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <p>&copy; 2026 HiSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="../js/utils.js"></script>
+    <script defer src="../js/brand.js"></script>
+    <script defer src="../js/landing.js"></script>
+    <script defer src="../js/common.js"></script>
+    <script>
+        // Initialize Particles
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#6366f1' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#6366f1',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1.5,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+
+</html>

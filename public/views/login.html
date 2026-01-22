@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <!-- Title and Icon -->
+
+        <title id="loginTitle">ConnectHub - Secure Video Conferencing</title>
+        <link id="shortcutIcon" rel="shortcut icon" href="../images/logo.png" />
+        <link id="appleTouchIcon" rel="apple-touch-icon" href="../images/logo.png" />
+
+        <!-- Meta Information -->
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta
+            name="description"
+            content="ConnectHub - Premium video conferencing for teams. Secure, fast, reliable. No downloads required."
+        />
+        <meta
+            name="keywords"
+            content="video conferencing, webrtc, video calls, screen sharing, team meetings, secure video, remote collaboration"
+        />
+
+        <!-- https://ogp.me -->
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="ConnectHub" />
+        <meta property="og:title" content="ConnectHub - Premium Video Conferencing" />
+        <meta property="og:description" content="Start secure video calls instantly. No sign-ups, no downloads." />
+        <meta property="og:image" content="https://connecthub.app/images/preview.png" />
+        <meta property="og:url" content="https://connecthub.app" />
+
+        <!-- StyleSheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" />
+        <link rel="stylesheet" href="../css/landing.css" />
+        <link rel="stylesheet" href="../css/translate.css" />
+
+        <!-- Js scripts -->
+
+        <script async src="../js/umami.js"></script>
+        <script defer src="../js/Brand.js"></script>
+        <script async src="../js/Translate.js"></script>
+
+        <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+        <!-- xss -->
+        <script src="https://cdn.jsdelivr.net/npm/xss/dist/xss.min.js"></script>
+
+        <!-- axios -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <!-- sweetalert -->
+        <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8"></script>
+    </head>
+    <body class="has-animations">
+        <div id="google_translate_element"></div>
+
+        <div class="body-wrap">
+            <header class="site-header reveal-from-top">
+                <div class="container">
+                    <div class="site-header-inner">
+                        <div class="brand">
+                            <div class="m-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="site-content mt-32">
+                <section class="hero section illustration-section-01">
+                    <div class="container">
+                        <div class="hero-inner section-inner">
+                            <div class="split-wrap invert-mobile">
+                                <div class="split-item">
+                                    <div class="hero-content split-item-content center-content-mobile">
+                                        <div id="loginForm">
+                                            <br />
+                                            <div class="mb-12">
+                                                <input
+                                                    id="username"
+                                                    class="form-input"
+                                                    type="name"
+                                                    placeholder="Username"
+                                                    maxlength="254"
+                                                    required
+                                                />
+                                            </div>
+                                            <br />
+                                            <div class="mb-12">
+                                                <input
+                                                    id="password"
+                                                    class="form-input"
+                                                    type="password"
+                                                    maxlength="32"
+                                                    placeholder="Password"
+                                                    required
+                                                />
+                                            </div>
+                                            <div class="mt-24 mb-32">
+                                                <button
+                                                    id="loginButton"
+                                                    class="button button-primary button-block pulse"
+                                                >
+                                                    Login
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Join Room Section hidden -->
+                                        <div id="joinRoomForm" class="mb-12">
+                                            <div class="hero-copy reveal-from-bottom">
+                                                <h1 class="hero-title mt-0">
+                                                    Pick name. <br />
+                                                    Share URL. <br />
+                                                    Start conference.
+                                                </h1>
+                                            </div>
+                                            <br />
+                                            <div class="mb-12">
+                                                <input
+                                                    id="roomName"
+                                                    class="form-input"
+                                                    type="text"
+                                                    placeholder="Enter room name"
+                                                    maxlength="32"
+                                                    required
+                                                />
+                                            </div>
+                                            <div class="mt-24 mb-32">
+                                                <div class="button-group">
+                                                    <button
+                                                        id="randomRoomButton"
+                                                        class="button button-primary"
+                                                        title="Random room"
+                                                    >
+                                                        <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                                                    </button>
+                                                    <button id="joinSelectRoomButton" class="button button-primary">
+                                                        JOIN ROOM
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer" class="site-footer center-content-mobile">
+                <div class="container">
+                    <div class="site-footer-inner">
+                        <div class="footer-top space-between text-xxs">
+                            <div class="brand"></div>
+                            <div class="footer-social">
+                                <ul class="list-reset">
+                                    <li>
+                                        <a
+                                            class="github-button"
+                                            href="https://github.com"
+                                            data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                                            data-size="large"
+                                            aria-label="GitHub"
+                                            >GitHub</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom space-between text-xxs invert-order-desktop">
+                            <nav class="footer-nav">
+                                <ul class="list-reset">
+                                    <li>
+                                        <a href="/about">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="/privacy">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="footer-copyright">&copy; 2026 ConnectHub. All rights reserved.</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script defer src="../js/utils.js"></script>
+        <script defer src="../js/login.js"></script>
+        <script defer src="../js/brand.js"></script>
+        <script defer src="../js/landing.js"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </body>
+</html>

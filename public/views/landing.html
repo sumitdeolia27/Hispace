@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Title and Icon -->
+    <title id="landingTitle">HiSpace - Modern Video Conferencing</title>
+    <link id="shortcutIcon" rel="shortcut icon" href="../images/logo.png" />
+    <link id="appleTouchIcon" rel="apple-touch-icon" href="../images/logo.png" />
+
+    <!-- Meta Information -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HiSpace - Modern video conferencing for teams. Secure, fast, and reliable." />
+    <meta name="keywords" content="video conferencing, webrtc, team meetings, secure video calls, screen sharing" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="../css/landing.css" />
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Scripts -->
+    <script async src="../js/umami.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xss/dist/xss.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="HiSpace" width="120" height="120" />
+                    <span class="logo-text">HiSpace</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="/newcall" class="btn-primary">Start Meeting</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    Connect with <span class="gradient-text">Anyone</span>, Anywhere
+                </h1>
+                <p class="hero-description">
+                    Experience crystal-clear video calls with enterprise-grade security. 
+                    No downloads, no sign-ups. Just instant connections.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/newcall" class="btn-hero btn-primary">
+                        <i class="fas fa-video"></i>
+                        Start Free Meeting
+                    </a>
+                    <a href="#features" class="btn-hero btn-secondary">
+                        <i class="fas fa-arrow-down"></i>
+                        Explore Features
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8K</div>
+                        <div class="stat-label">Resolution</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Rooms</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-description">Everything you need for seamless collaboration</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Enterprise Security</h3>
+                    <p class="feature-description">
+                        End-to-end encrypted communications with industry-leading security standards.
+                    </p>
+                </div>
+
+                <div class="feature-card glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Ultra-Fast</h3>
+                    <p class="feature-description">
+                        Optimized P2P technology ensures minimal latency and maximum quality.
+                    </p>
+                </div>
+
+                <div class="feature-card glass" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="feature-title">Screen Sharing</h3>
+                    <p class="feature-description">
+                        Share your screen in stunning 8K resolution at up to 60fps.
+                    </p>
+                </div>
+
+                <div class="feature-card glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="feature-title">Real-time Chat</h3>
+                    <p class="feature-description">
+                        Built-in messaging with emoji support and file sharing capabilities.
+                    </p>
+                </div>
+
+                <div class="feature-card glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Cross-Platform</h3>
+                    <p class="feature-description">
+                        Works seamlessly on desktop, tablet, and mobile devices.
+                    </p>
+                </div>
+
+                <div class="feature-card glass" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-record-vinyl"></i>
+                    </div>
+                    <h3 class="feature-title">Recording</h3>
+                    <p class="feature-description">
+                        Record your meetings and save them for future reference.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content glass" data-aos="fade-up">
+                <h2 class="section-title">Why Choose HiSpace?</h2>
+                <p class="about-text">
+                    HiSpace is built on cutting-edge WebRTC technology, providing you with 
+                    the best video conferencing experience. Our peer-to-peer architecture 
+                    ensures low latency, high quality, and complete privacy.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No downloads required</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No account needed</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Unlimited meeting time</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Open source & self-hostable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content glass" data-aos="zoom-in">
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-description">
+                    Create your first meeting in seconds. No credit card required.
+                </p>
+                <a href="/newcall" class="btn-hero btn-primary btn-large">
+                    <i class="fas fa-rocket"></i>
+                    Launch Meeting Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../images/logo.png" alt="HiSpace" width="100" height="100" />
+                    <span class="logo-text">HiSpace</span>
+                </div>
+                <div class="footer-links">
+                    <a href="/about">About</a>
+                    <a href="/privacy">Privacy</a>
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HiSpace. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="../js/brand.js"></script>
+    <script defer src="../js/landing.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Particles
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#6366f1' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#6366f1',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
